@@ -52,6 +52,8 @@ public class GameManager
                         _monsters.Remove(go);
                         if (OnSpawnEvent != null)
                             OnSpawnEvent.Invoke(-1);
+                        
+                            
                     }
                 }
                 break;

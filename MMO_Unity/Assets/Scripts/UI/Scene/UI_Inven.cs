@@ -20,7 +20,7 @@ public class UI_Inven : UI_Scene
             Managers.Resource.Destroy(child.gameObject);
 
         //실제 인벤토리 정보를 참고
-        for(int i=0; i<8; i++)
+        for(int i=0; i<4; i++)
         {
             GameObject item = Managers.UI.MakeSubItem<UI_Inven_Item>(gridPanel.transform).gameObject;
             

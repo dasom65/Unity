@@ -8,9 +8,9 @@ public class LoginScene : BaseScene
     protected override void Init()
     {
         base.Init();
-        SceneType = Define.Scene.Login;
+        SceneType = Define.Scene.GameClear;
         //Managers.UI.ShowSceneUI<UI_Inven>();
-        Managers.UI.ShowPopupUI<UI_Button>();
+        
 
     }
     private void Update()

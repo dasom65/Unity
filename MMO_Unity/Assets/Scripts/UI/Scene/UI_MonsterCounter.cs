@@ -15,5 +15,8 @@ public class UI_MonsterCounter : MonoBehaviour
     {
         monstercount = GameObject.FindGameObjectsWithTag("Monster");
         monstercounttext.text = $"남은몬스터수:{monstercount.Length.ToString()}/5";
+
+        if(monstercount.Length==0)
+            Managers.Scene.LoadScene(Define.Scene.GameClear);
     }
 }

@@ -26,9 +26,11 @@ public class PlayerStat : Stat
                 if (_exp < stat.totalExp)
                     break;
                 level++;
+
             }
             if(level !=Level)
             {
+                
                 Debug.Log("Level up");
                 Level = level;
                 SetStat(Level);

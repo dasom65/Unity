@@ -9,9 +9,8 @@ public class SpawningPool : MonoBehaviour
     int _monsterCount = 0;
     int _reserveCount = 0;
     [SerializeField]
-    int _keepMonsterCount = 0;
-    [SerializeField]
-    int _totalMonsterCount = 0;
+    int _totalMonster = 0;
+   
     [SerializeField]
     Vector3 _spawnPos;
     [SerializeField]
@@ -22,14 +21,14 @@ public class SpawningPool : MonoBehaviour
 
     public void AddMonsterCount(int value) { _monsterCount += value; }
     public void MonsterCount(int count) { 
-        _keepMonsterCount = count;
-        for (_monsterCount = 0; _monsterCount < _keepMonsterCount; _monsterCount++)
+        _totalMonster = count;
+        for (_monsterCount = 0; _monsterCount < _totalMonster; _monsterCount++)
         {
             //Spawn();
             StartCoroutine(ReserveSpawn());
         }
     }
-    public void TotalMonster(int tcount) { _totalMonsterCount = tcount; }
+    
     void Start()
     {
         Managers.Game.OnSpawnEvent -= AddMonsterCount;
@@ -41,7 +40,7 @@ public class SpawningPool : MonoBehaviour
     void Update()
     {
 
-        //while(_reserveCount+_monsterCount< _keepMonsterCount)
+        //while(_reserveCount+_monsterCount< _totalMonster)
         //{
         //    StartCoroutine(ReserveSpawn());
         //}

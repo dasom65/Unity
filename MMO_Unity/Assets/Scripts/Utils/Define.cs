@@ -32,6 +32,7 @@ public enum Layer
         Login,
         Lobby,
         Game,
+        GameClear
     }
     public enum Sound
     {
